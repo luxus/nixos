@@ -8,7 +8,7 @@
     };
   };
 
-  networking.interfaces."enp0s31f6".wakeOnLan.enable = true;
+  networking.interfaces."eno2".wakeOnLan.enable = true;
 
   environment.systemPackages = with pkgs; [
     # ethtool can be used to manually enable wakeOnLan, eg:

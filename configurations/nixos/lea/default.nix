@@ -7,7 +7,15 @@ in
 {
   imports = [
     self.nixosModules.default
-    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4
+    inputs.nixos-hardware.nixosModules.common-cpu-amd
+    inputs.nixos-hardware.nixosModules.common-cpu-amd-pstate
+    inputs.nixos-hardware.nixosModules.common-cpu-amd-zenpower
+    inputs.nixos-hardware.nixosModules.common-cpu-amd-raphael-igpu
+    # inputs.nixos-hardware.nixosModules.common-gpu-nvidia-ada-lovelace
+    # inputs.nixos-hardware.nixosModules.common-gpu
+    inputs.nixos-hardware.nixosModules.common-pc-ssd
+    inputs.nixos-hardware.nixosModules.common-pc
+
     ./configuration.nix
     (self + /modules/nixos/linux/gui/hyprland)
     (self + /modules/nixos/linux/gui/gnome.nix)
@@ -16,18 +24,18 @@ in
     (self + /modules/nixos/linux/gui/_1password.nix)
   ];
 
-  services.openssh.enable = true;
-  services.tailscale.enable = true;
-  services.fprintd.enable = true;
-  services.syncthing = { enable = true; user = "srid"; dataDir = "/home/srid/Documents"; };
+  # Enable the OpenSSH daemon.
+  services.openssh = {
+    enable = true;
+  };
+  networking.firewall.allowedTCPPorts = [ 22 ];
 
   programs.nix-ld.enable = true; # for vscode server
 
   environment.systemPackages = with pkgs; [
-    google-chrome
     vscode
+    vivaldi
     zed-editor
-    telegram-desktop
   ];
 
   hardware.i2c.enable = true;

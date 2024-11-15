@@ -15,7 +15,7 @@ in
   # actualism-app (temp host)
   services.nginx = {
     enable = true;
-    virtualHosts."www.actualism.app" = {
+    virtualHosts."luxus.ai" = {
       enableACME = true;
       # addSSL = true;
       forceSSL = true;
@@ -27,17 +27,17 @@ in
   };
   security.acme = {
     acceptTerms = true;
-    defaults.email = "srid@srid.ca";
+    defaults.email = "luxuspur@gmail.com";
   };
-  systemd.services.actualism-app = {
+  systemd.services.luxusai-app = {
     enable = true;
-    description = "actualism-app server";
+    description = "luxusai-app server";
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       ExecStart =
         lib.getExe (pkgs.writeShellApplication {
-          name = "actualism-app-start";
+          name = "luxusai-app-start";
           text = ''
             cd ${pkgs.actualism-app}/ 
             ${pkgs.actualism-app}/bin/actualism-app

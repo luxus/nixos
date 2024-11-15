@@ -1,9 +1,8 @@
 {
-  time.timeZone = "America/New_York";
+  time.timeZone = "Europe/Zurich";
 
   location = {
-    # Quebec City
-    latitude = 46.813359;
-    longitude = -71.215796;
+    latitude = 47.57347571147302;
+    longitude = 8.516919680627781;
   };
 }

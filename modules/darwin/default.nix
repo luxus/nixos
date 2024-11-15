@@ -20,6 +20,7 @@ in
     self.nixosModules.common
     inputs.ragenix.darwinModules.default
     ./all/zsh-completion-fix.nix
+    ./homebrew.nix
   ];
 
   # Auto upgrade nix package and the daemon service.

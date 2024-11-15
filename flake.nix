@@ -4,6 +4,7 @@
   inputs = {
     # Principle inputs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    zig_overlay.url = "github:mitchellh/zig-overlay";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -26,34 +27,36 @@
     omnix.url = "github:juspay/omnix";
     hyprland.url = "github:hyprwm/Hyprland";
 
-    # Neovim
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    # Emacs
-    nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
-    nix-doom-emacs-unstraightened.inputs.nixpkgs.follows = "nixpkgs";
-
     # Devshell
     treefmt-nix.url = "github:numtide/treefmt-nix";
+
+    ghostty.url = "github:clo4/ghostty-hm-module";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = inputs@{ self, ... }:
+  outputs =
+    inputs@{ self, ... }:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
-      imports = (with builtins;
-        map
-          (fn: ./modules/flake-parts/${fn})
-          (attrNames (readDir ./modules/flake-parts)));
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
+      imports = (
+        with builtins; map (fn: ./modules/flake-parts/${fn}) (attrNames (readDir ./modules/flake-parts))
+      );
 
-      perSystem = { lib, system, ... }: {
-        # Make our overlay available to the devShell
-        # "Flake parts does not yet come with an endorsed module that initializes the pkgs argument.""
-        # So we must do this manually; https://flake.parts/overlays#consuming-an-overlay
-        _module.args.pkgs = import inputs.nixpkgs {
-          inherit system;
-          overlays = lib.attrValues self.overlays;
-          config.allowUnfree = true;
+      perSystem =
+        { lib, system, ... }:
+        {
+          # Make our overlay available to the devShell
+          # "Flake parts does not yet come with an endorsed module that initializes the pkgs argument.""
+          # So we must do this manually; https://flake.parts/overlays#consuming-an-overlay
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = lib.attrValues self.overlays;
+            config.allowUnfree = true;
+          };
         };
-      };
     };
 }

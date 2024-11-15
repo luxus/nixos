@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   fonts = {
@@ -11,8 +16,7 @@
       noto-fonts-emoji
       fira-code
       cascadia-code
-      nerdfonts
-      font-awesome
+      jetbrains-mono
     ];
   };
 }

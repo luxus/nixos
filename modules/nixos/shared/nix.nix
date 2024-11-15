@@ -7,8 +7,8 @@ in
 {
   nixpkgs = {
     config = {
-      allowBroken = true;
-      allowUnsupportedSystem = true;
+      allowBroken = false;
+      allowUnsupportedSystem = false;
       allowUnfree = true;
     };
     overlays = lib.attrValues self.overlays;

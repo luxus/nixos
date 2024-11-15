@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 {
   programs.tmux = {
-    enable = true;
+    enable = false;
     shortcut = "a";
     # aggressiveResize = true; -- Disabled to be iTerm-friendly
     baseIndex = 1;

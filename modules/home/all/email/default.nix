@@ -28,19 +28,19 @@ in
     ./thunderbird.nix
   ];
   accounts.email.accounts = {
-    "srid@srid.ca" = iCloudMailSettings // {
+    "kai@luxus.ai" = iCloudMailSettings // {
       primary = true;
-      realName = "Sridhar Ratnakumar";
-      address = "happyandharmless@icloud.com";
-      aliases = [ "srid@srid.ca" ];
-      userName = "happyandharmless";
-      passwordCommand = "op read op://Personal/iCloud-Apple/home-manager";
+      realName = "Kai Löhnert";
+      address = "kai@luxus.ai";
+      aliases = [ "kl82@me.com" ];
+      userName = "kai@luxus.ai";
+      passwordCommand = "op read op://Private/iCloud/home-manager";
     };
-    "sridhar.ratnakumar@juspay.in" = GmailSettings // {
-      realName = "Sridhar Ratnakumar";
-      address = "sridhar.ratnakumar@juspay.in";
-      userName = "sridhar.ratnakumar@juspay.in";
-      passwordCommand = "op read op://Personal/Google-Juspay/home-manager";
+    "luxuspur@gmail.com" = GmailSettings // {
+      realName = "Kai Löhnert";
+      address = "luxuspur@gmail.com";
+      userName = "luxuspur@gmail.com";
+      passwordCommand = "op read op://Private/Google-luxuspur/home-manager";
     };
   };
 }

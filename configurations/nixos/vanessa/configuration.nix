@@ -5,13 +5,13 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./disko.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "vixen"; # Define your hostname.
+  networking.hostName = "vanessa"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
@@ -39,7 +39,7 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing.enable = false;
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;

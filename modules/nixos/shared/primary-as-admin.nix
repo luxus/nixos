@@ -1,5 +1,10 @@
 # Make flake.config.peope.myself the admin of the machine
-{ flake, pkgs, lib, ... }:
+{
+  flake,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   # Login via SSH with mmy SSH key
@@ -10,16 +15,22 @@
     in
     {
       root.openssh.authorizedKeys.keys = myKeys;
-      ${me.username} = {
-        openssh.authorizedKeys.keys = myKeys;
-        shell = pkgs.zsh;
-      } // lib.optionalAttrs pkgs.stdenv.isLinux {
-        isNormalUser = true;
-        extraGroups = [ "networkmanager" "wheel" ];
-      };
+      ${me.username} =
+        {
+          openssh.authorizedKeys.keys = myKeys;
+          shell = pkgs.nushell;
+        }
+        // lib.optionalAttrs pkgs.stdenv.isLinux {
+          isNormalUser = true;
+          extraGroups = [
+            "networkmanager"
+            "wheel"
+          ];
+        };
     };
 
-  programs.zsh.enable = lib.mkIf pkgs.stdenv.isLinux true;
+  # programs.zsh.enable = lib.mkIf pkgs.stdenv.isLinux true;
+  # programs.nushell.enable = lib.mkIf pkgs.stdenv.isLinux true;
 
   # Make me a sudoer without password
   security = lib.optionalAttrs pkgs.stdenv.isLinux {

@@ -8,7 +8,7 @@
   programs.git = {
     package = pkgs.gitAndTools.gitFull;
     enable = true;
-    userName = flake.config.me.fullname;
+    userName = flake.config.me.username;
     userEmail = flake.config.me.email;
     aliases = {
       co = "checkout";
@@ -27,7 +27,10 @@
       # https://git-scm.com/book/en/v2/Git-Tools-Rerere
       rerere.enabled = true;
     };
-    ignores = [ "*~" "*.swp" ];
+    ignores = [
+      "*~"
+      "*.swp"
+    ];
     lfs.enable = true;
     delta = {
       enable = true;
@@ -53,9 +56,15 @@
       # This looks better with the kitty theme.
       gui.theme = {
         lightTheme = false;
-        activeBorderColor = [ "white" "bold" ];
+        activeBorderColor = [
+          "white"
+          "bold"
+        ];
         inactiveBorderColor = [ "white" ];
-        selectedLineBgColor = [ "reverse" "white" ];
+        selectedLineBgColor = [
+          "reverse"
+          "white"
+        ];
       };
     };
   };

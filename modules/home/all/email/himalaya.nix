@@ -11,7 +11,7 @@
   };
 
   accounts.email.accounts = {
-    "srid@srid.ca" = {
+    "kai@luxus.ai" = {
       himalaya = {
         enable = true;
         # Don't forget to run `himalaya account sync` first!

@@ -1,0 +1,5 @@
+{
+  import = [
+    ./llamaindex.nix
+  ];
+}

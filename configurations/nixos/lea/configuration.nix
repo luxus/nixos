@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   imports = [
     # Include the results of the hardware scan.
@@ -9,8 +7,15 @@
 
   # Bootloader.
   boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 10; # Keep only the last 10 generations
+      consoleMode = "auto";
+    };
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
     timeout = 10;
   };
   networking = {

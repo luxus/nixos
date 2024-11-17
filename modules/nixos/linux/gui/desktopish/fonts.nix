@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -18,6 +16,10 @@
       fira-code
       cascadia-code
       jetbrains-mono
+      iosevka
+      intel-one-mono
+      ibm-plex
+
     ];
   };
 }

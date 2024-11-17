@@ -1,7 +1,7 @@
 {
   imports = [
-    ./all/zsh.nix
     ./all/wezterm
+    ./all/aerospace.nix
     # ./all/emacs.nix
   ];
 }

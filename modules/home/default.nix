@@ -6,7 +6,7 @@
     #./all/neovim
     # ./helix.nix
     ./all/ssh.nix
-    ./all/ai
+    # ./all/ai
     ./all/omp.nix
     ./all/ghostty.nix
     ./all/astronvim.nix
@@ -15,7 +15,10 @@
     ./all/git.nix
     ./all/direnv.nix
     ./all/zellij.nix
-    #./nushell.nix
+    ./all/nushell.nix
+    ./all/aria2.nix
+    ./all/jujutsu.nix
+    ./all/fastfetch.nix
     ./all/just.nix
     # ./powershell.nix
     #./all/juspay.nix

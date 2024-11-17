@@ -1,5 +1,7 @@
-{ pkgs, ... }: {
-  /* imports = [
+{ pkgs, ... }:
+{
+  /*
+    imports = [
     flake.inputs.nixos-vscode-server.nixosModules.default
     ];
     services.vscode-server.enable = true;
@@ -13,7 +15,8 @@
     # (vscode-with-extensions.override
     #  { vscodeExtensions = with vscode-extensions; [ ms-vsliveshare.vsliveshare ]; })
     vscode
-    nodejs-16_x # Need this for https://nixos.wiki/wiki/Vscode server
+    #NOTE: not sure if it needs to be 16?
+    # nodejs-16_x # Need this for https://nixos.wiki/wiki/Vscode server
   ];
 
   # https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc

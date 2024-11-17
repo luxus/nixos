@@ -1,6 +1,7 @@
 {
   imports = [
     ./all/bash.nix
+    ./all/ai
     ./all/zsh.nix
     ./all/vscode-server.nix
     ./all/rio.nix

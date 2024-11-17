@@ -1,13 +1,9 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
-  environment.systemPath =
-    if pkgs.system == "aarch64-darwin" then
-      [
-        "/opt/homebrew/bin"
-        "/opt/homebrew/sbin"
-      ]
-    else
-      [ ];
+  environment.systemPath = lib.mkIf pkgs.stdenv.isDarwin [
+    "/opt/homebrew/bin"
+    "/opt/homebrew/sbin"
+  ];
   homebrew = {
     enable = true;
     onActivation = {

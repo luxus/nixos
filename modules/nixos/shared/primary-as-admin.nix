@@ -15,7 +15,7 @@
     in
     {
       root.openssh.authorizedKeys.keys = myKeys;
-      root.extraGroups = [ "uinput" ];
+      # root.extraGroups = [ "uinput" ];
       ${me.username} =
         {
           openssh.authorizedKeys.keys = myKeys;

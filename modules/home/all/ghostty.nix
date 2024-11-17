@@ -1,10 +1,15 @@
-{ flake, pkgs, ... }:
+{
+  lib,
+  flake,
+  pkgs,
+  ...
+}:
 {
   imports = [ flake.inputs.ghostty.homeModules.default ];
   programs.ghostty = {
     enable = true;
 
-    package = flake.inputs.ghostty-bin.packages.${pkgs.system}.default;
+    package = lib.mkIf pkgs.stdenv.isLinux flake.inputs.ghostty-bin.packages.${pkgs.system}.default;
 
     settings = {
       # font-family = "Iosevka";

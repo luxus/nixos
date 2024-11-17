@@ -24,7 +24,6 @@ in
     packages = with pkgs; [
       # Unixy tools
       ripgrep
-      fd
       sd
       wget
       moreutils # ts, etc.
@@ -52,8 +51,6 @@ in
       git-merge-and-delete
 
       # Fonts
-      cascadia-code
-      monaspace
       lsof
       rustscan
 
@@ -62,13 +59,10 @@ in
       sd
       tree
       nmap
-      aria2
       # new tools
       du-dust
       gdu
-      jujutsu
       rclone
-      rsync
       w3m
       ast-grep
       mediainfo
@@ -82,10 +76,8 @@ in
       ouch
       nettools
       doggo
-      fastfetch
       duf
       gitu
-      devenv
       twitch-tui
       nushellPlugins.skim
       nushellPlugins.gstat
@@ -99,6 +91,7 @@ in
       nixfmt-rfc-style
       nixpkgs-review
       nix-tree
+      nixd
 
       # Dev
       tmate
@@ -111,10 +104,8 @@ in
   programs = {
     nix-index = {
       enable = true;
-      enableZshIntegration = true;
     };
     nix-index-database.comma.enable = true;
-    autojump.enable = false;
     zoxide.enable = true;
     bottom = {
       enable = true;
@@ -127,7 +118,7 @@ in
     bat = {
       enable = true;
       extraPackages = with pkgs.bat-extras; [
-        # batdiff
+        batdiff
         batgrep
         batman
         batpipe
@@ -158,7 +149,10 @@ in
     jq.enable = true;
     # Install btop https://github.com/aristocratos/btop
     btop.enable = true;
-    thefuck.enable = true;
+    thefuck = {
+      enable = true;
+      enableInstantMode = true;
+    };
     fd.enable = true;
     bun.enable = true;
     # zellij = {
@@ -186,8 +180,6 @@ in
 
     eza = {
       enable = true;
-      enableBashIntegration = true;
-      enableZshIntegration = true;
       icons = "auto";
       git = true;
     };

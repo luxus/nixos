@@ -13,8 +13,10 @@ in
     inputs.nixos-hardware.nixosModules.common-cpu-amd-raphael-igpu
     # inputs.nixos-hardware.nixosModules.common-gpu-nvidia-ada-lovelace
     # inputs.nixos-hardware.nixosModules.common-gpu
+    inputs.nixos-hardware.nixosModules.common-gpu-nvidia
     inputs.nixos-hardware.nixosModules.common-pc-ssd
     inputs.nixos-hardware.nixosModules.common-pc
+    inputs.nixos-hardware.nixosModules.common-hidpi
 
     ./configuration.nix
     (self + /modules/nixos/linux/gui/hyprland)

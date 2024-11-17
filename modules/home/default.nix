@@ -17,9 +17,9 @@
     ./all/zellij.nix
     ./all/nushell.nix
     ./all/aria2.nix
-    ./all/jujutsu.nix
     ./all/fastfetch.nix
     ./all/just.nix
+    ./all/zathura.nix
     # ./powershell.nix
     #./all/juspay.nix
   ];

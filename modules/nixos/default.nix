@@ -8,12 +8,13 @@ in
 {
   imports = [
     {
-        users.users.${config.me.username}  = {
-    isNormalUser = true;
-    hashedPassword = "$6$sZU9yfCR0qIEOegs$KprZkpYZD3/8VH50MHZSbaKITLW4tOVBJzri9P9TyCZ3lvqRACgXsghjRqb8KE5a1GHD4I6dFZdxCTKKUZP5e.";
-  };
+      users.users.${config.me.username} = {
+        isNormalUser = true;
+        hashedPassword = "$6$sZU9yfCR0qIEOegs$KprZkpYZD3/8VH50MHZSbaKITLW4tOVBJzri9P9TyCZ3lvqRACgXsghjRqb8KE5a1GHD4I6dFZdxCTKKUZP5e.";
+      };
 
       home-manager.users.${config.me.username} = { };
+      home-manager.backupFileExtension = "backup";
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.linux-only

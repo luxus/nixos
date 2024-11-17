@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
     # Isolated features
     ./hidpi.nix
@@ -11,6 +12,7 @@
     ./redshift.nix
     ./gnome-keyring.nix
     ./guiapps.nix
+    ./kanata.nix
     ./polybar.nix
     ./hotplug.nix
 

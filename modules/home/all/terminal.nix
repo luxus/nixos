@@ -54,6 +54,8 @@ in
       # Fonts
       cascadia-code
       monaspace
+      lsof
+      rustscan
 
       gnupg
       ripgrep # Better `grep`

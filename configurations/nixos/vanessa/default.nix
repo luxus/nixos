@@ -16,6 +16,7 @@ in
     ./configuration.nix
     (self + /modules/nixos/linux/gui/hyprland)
     (self + /modules/nixos/linux/gui/gnome.nix)
+    (self + /modules/nixos/linux/gui/kde.nix)
     (self + /modules/nixos/linux/gui/desktopish/fonts.nix)
     (self + /modules/nixos/linux/gui/_1password.nix)
   ];
@@ -23,8 +24,8 @@ in
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
+    openFirewall = true;
   };
-  networking.firewall.allowedTCPPorts = [ 22 ];
 
   programs.nix-ld.enable = true; # for vscode server
 

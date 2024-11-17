@@ -17,7 +17,7 @@
     ./hotplug.nix
 
     # WMish things
-    ./xmonad
+    # ./xmonad
     #./taffybar # Disabled, because it rarely works (and memory hungry)
     # ./xmobar # shit UX
   ];

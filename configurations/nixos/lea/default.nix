@@ -20,6 +20,7 @@ in
     (self + /modules/nixos/linux/gui/hyprland)
     (self + /modules/nixos/linux/gui/gnome.nix)
     (self + /modules/nixos/linux/gui/desktopish/fonts.nix)
+    (self + /modules/nixos/linux/gui/desktopish/kanata.nix)
     (self + /modules/nixos/linux/gui/desktopish/steam.nix)
     (self + /modules/nixos/linux/gui/_1password.nix)
   ];
@@ -39,6 +40,7 @@ in
   ];
 
   hardware.i2c.enable = true;
+  hardware.uinput.enable = true;
 
   # Workaround the annoying `Failed to start Network Manager Wait Online` error on switch.
   # https://github.com/NixOS/nixpkgs/issues/180175

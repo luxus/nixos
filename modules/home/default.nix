@@ -6,6 +6,7 @@
     #./all/neovim
     # ./helix.nix
     ./all/ssh.nix
+    ./all/ai
     ./all/omp.nix
     ./all/ghostty.nix
     ./all/astronvim.nix

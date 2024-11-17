@@ -15,6 +15,7 @@
     in
     {
       root.openssh.authorizedKeys.keys = myKeys;
+      root.extraGroups = [ "uinput" ];
       ${me.username} =
         {
           openssh.authorizedKeys.keys = myKeys;
@@ -25,6 +26,7 @@
           extraGroups = [
             "networkmanager"
             "wheel"
+            "uinput"
           ];
         };
     };

@@ -1,34 +1,21 @@
+{ pkgs, ... }:
 {
   services.kanata = {
-    enable = true;
+    enable = false;
+    package = pkgs.kanata-with-cmd;
+    keyboards.default.extraDefCfg = "process-unmapped-keys yes";
     keyboards.default.config = ''
-      (defcfg
-        ;; Process keys not explicitly mapped
-        process-unmapped-keys yes
-      )
-
       (defsrc
         ;; Define the keys to be intercepted
-        caps 1 2 3 4 5 6 7 8 9 0
+        caps
       )
 
-      (deflayer base
-        ;; Remap Caps Lock to tap Escape and hold to activate the "fn-layer"
-        (tap-hold 200 esc (layer-toggle fn-layer))
+      (defalias
+        ;; tap for caps lock, hold for left control
+        cap (tap-hold 200 200 esc lctl)
       )
-
-      (deflayer fn-layer
-        ;; Remap numbers to function keys when in this layer
-        1 f1
-        2 f2
-        3 f3
-        4 f4
-        5 f5
-        6 f6
-        7 f7
-        8 f8
-        9 f9
-        0 f10
+      (deflayer example
+        @cap
       )
     '';
   };

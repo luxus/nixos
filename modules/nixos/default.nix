@@ -14,7 +14,7 @@ in
       };
 
       home-manager.users.${config.me.username} = { };
-      home-manager.backupFileExtension = "backup";
+      home-manager.backupFileExtension = "backup2";
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.linux-only

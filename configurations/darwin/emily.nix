@@ -17,7 +17,6 @@ in
 
   system.keyboard = {
     enableKeyMapping = true;
-    remapCapsLockToControl = true;
   };
   # See https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix
   system.defaults = {

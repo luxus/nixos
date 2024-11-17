@@ -26,11 +26,11 @@
           # all-outputs = true;
           show-special = true;
           /*
-          format = "{name}{icon}";
-          format-icons = {
-            active = "";
-            default = "";
-          };
+            format = "{name}{icon}";
+            format-icons = {
+              active = "";
+              default = "";
+            };
           */
         };
         "cpu" = {
@@ -41,7 +41,17 @@
         };
         "backlight" = {
           format = "{percent}% {icon}";
-          format-icons = [ "" "" "" "" "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
         battery = {
           states = {
@@ -53,7 +63,13 @@
           format-charging = "{capacity}% ";
           format-plugged = "{capacity}% ";
           format-alt = "{time} {icon}";
-          format-icons = [ "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
         "power-profiles-daemon" = {
           format = "{icon}";
@@ -88,7 +104,11 @@
             phone = "";
             portable = "";
             car = "";
-            default = [ "" "" "" ]; # Assuming consistent icons for simplicity
+            default = [
+              ""
+              ""
+              ""
+            ]; # Assuming consistent icons for simplicity
           };
           on-click = "pavucontrol";
         };

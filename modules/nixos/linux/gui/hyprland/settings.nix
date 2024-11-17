@@ -9,7 +9,10 @@ let
     meta.description = ''
       Blue-light filter screenshot script for Hyprland. Directly copies region to clipboard.
     '';
-    runtimeInputs = with pkgs; [ hyprshade hyprshot ];
+    runtimeInputs = with pkgs; [
+      hyprshade
+      hyprshot
+    ];
     text = ''
       #!/bin/sh
       trap 'hyprshade on ${blue-light-filter}' EXIT
@@ -24,7 +27,9 @@ in
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
     bind = [
-      "$mainMod, Q, exec, rio"
+      "$mainMod, Q, exec, ghostty"
+      "$mainMod, D, exec, walker"
+      "$mainMod, B, exec, vivaldi"
 
       # Window management
       "$mainMod, C, killactive,"
@@ -76,11 +81,8 @@ in
     ];
 
     monitor = [
-      # Laptop screen (OLED 2k)
-      ",highres,auto,2"
-      # Apple Studio Display
-      "DP-5,highres,auto-up,2"
-      "DP-6,disable" # Same as DP-5
+      "desc:Lenovo Group Limited P40w-20 V90AAGAD,highres,auto,2"
+      "desc:LG Electronics 27GL850 010NTFAF6339,3840x2160@59.94, -1080x-700,2,transform, 3"
     ];
 
     general = {
@@ -93,10 +95,10 @@ in
 
     decoration = {
       rounding = 10;
-      drop_shadow = true;
-      shadow_range = 4;
-      shadow_render_power = 3;
-      "col.shadow" = "rgba(1a1a1aee)";
+      # drop_shadow = true;
+      # shadow_range = 4;
+      # shadow_render_power = 3;
+      # "col.shadow" = "rgba(1a1a1aee)";
       blur = {
         enabled = true;
         size = 3;
@@ -136,12 +138,14 @@ in
     misc = {
       force_default_wallpaper = 2;
     };
+    xwayland = {
+      force_zero_scaling = true;
+    };
 
     input = {
       follow_mouse = 1;
       natural_scroll = true;
       touchpad.natural_scroll = true;
-      kb_options = "ctrl:nocaps";
     };
   };
 }

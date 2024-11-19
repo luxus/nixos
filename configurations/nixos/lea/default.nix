@@ -33,13 +33,15 @@ in
     openFirewall = true;
   };
   services.llama-cpp = {
-    enable = false;
+    enable = true;
     openFirewall = true;
-    port = 8808;
+    port = 8081;
+    host = "0.0.0.0";
+    # extraFlags = [ "--slots" ];
     model = "/models/qwen2.5-coder-32b-instruct-q5_0.gguf";
   };
   services.ollama = {
-    enable = true;
+    enable = false;
     port = 12345;
     acceleration = "cuda";
     openFirewall = true;
@@ -49,7 +51,7 @@ in
     openFirewall = true;
     port = 8080;
     environment = {
-      OLLAMA_API_BASE_URL = "http://127.0.0.1:12345";
+      OLLAMA_API_BASE_URL = "http://127.0.0.1:8081";
       # Disable authentication
       # WEBUI_AUTH = "False";
       ANONYMIZED_TELEMETRY = "False";

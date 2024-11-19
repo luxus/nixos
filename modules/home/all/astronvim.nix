@@ -1,5 +1,4 @@
 {
-  flake,
   pkgs,
   ...
 }:
@@ -9,11 +8,8 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-
-    # package = pkgs.neovim;
-    package = flake.inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = pkgs.neovim-nightly;
   };
-
   home = {
     sessionVariables = {
       EDITOR = "nvim";

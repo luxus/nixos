@@ -1,5 +1,5 @@
 {
   imports = [
-    ./llamaindex.nix
+    # ./llamaindex.nix
   ];
 }

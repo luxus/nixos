@@ -1,15 +1,23 @@
 { pkgs, lib, ... }:
 {
-  services.xserver = {
-    enable = true;
-    displayManager.sddm.enable = true;
+  services = {
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
     desktopManager.plasma6.enable = true;
   };
-  hardware.video.hidpi.enable = lib.mkDefault true;
   # services.xserver.dpi = 192;
 
-  environment.systemPackages =
-    with pkgs;
-    [
-    ];
+  environment.systemPackages = with pkgs; [
+    kdePackages.qtwayland
+    kdePackages.krohnkite
+    # neovide
+    # krohnkite
+    (vivaldi.overrideAttrs (oldAttrs: {
+      dontWrapQtApps = false;
+      dontPatchELF = true;
+      nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [ pkgs.kdePackages.wrapQtAppsHook ];
+    }))
+  ];
 }

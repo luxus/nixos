@@ -1,10 +1,6 @@
 {
   programs.kitty = {
     enable = true;
-    font = {
-      name = "Monolisa";
-      size = 14.0;
-    };
     settings = {
       hide_window_decorations = "titlebar-only";
       font_features = "MonoLisa + frac + zero + ss02 + ss04 + ss07 + ss08 + ss09 + ss18";
@@ -15,6 +11,8 @@
       macos_option_as_alt = "left";
       cursor_stop_blinking_after = "15";
       enable_audio_bell = "no";
+      font_family = "MonoLisa";
+      font_size = "14";
     };
   };
 }

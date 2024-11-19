@@ -49,6 +49,8 @@ in
       sshuttle-via
       entr
       git-merge-and-delete
+      hub
+      dwt1-shell-color-scripts
 
       # Fonts
       lsof

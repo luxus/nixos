@@ -18,6 +18,11 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     ragenix.url = "github:yaxitech/ragenix";
     nuenv.url = "github:hallettj/nuenv/writeShellApplication";
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
 
     # Software inputs
     github-nix-ci.url = "github:juspay/github-nix-ci";

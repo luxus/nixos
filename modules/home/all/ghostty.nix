@@ -15,7 +15,7 @@
       # font-family = "Iosevka";
       font-family = "MonoLisa";
       font-style = "Regular";
-      font-size = 15;
+      font-size = 14;
       font-feature = [
         "zero"
         "calt"
@@ -43,7 +43,7 @@
       macos-non-native-fullscreen = true;
       macos-option-as-alt = true;
       # term = "xterm-kitty";
-      # window-decoration = false;
+      window-decoration = false;
       # window-padding-x = terminal.padding;
       # window-padding-y = terminal.padding;
       mouse-hide-while-typing = true;

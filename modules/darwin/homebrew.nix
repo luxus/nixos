@@ -83,6 +83,8 @@
       "telegram"
       "insomnia"
       "zed"
+      "vivaldi"
+      "chatterino"
     ];
   };
 }

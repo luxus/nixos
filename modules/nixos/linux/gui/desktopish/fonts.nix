@@ -13,6 +13,7 @@
       # If this happens , keep noto-fonts-emoji and try disabling others (nerdfonts, etc.)
       noto-fonts-emoji
       monaspace
+      monolisa
       fira-code
       cascadia-code
       jetbrains-mono

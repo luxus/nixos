@@ -11,6 +11,8 @@ self: super: {
   # llama-cpp = self.callPackage "${packages}/llama-cpp.nix" { };
   twitter-convert = self.callPackage "${packages}/twitter-convert" { };
   sshuttle-via = self.callPackage "${packages}/sshuttle-via.nix" { };
+  monolisa = self.callPackage "${packages}/monolisa.nix" { };
+
   ci = self.callPackage "${packages}/ci" { };
   touchpr = self.callPackage "${packages}/touchpr" { };
   actualism-app = inputs.actualism-app.packages.${self.system}.default;

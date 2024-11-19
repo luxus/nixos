@@ -41,6 +41,12 @@ in
         on-window-detected = [
           {
             "if" = {
+              app-id = "com.vivaldi.Vivaldi";
+            }; # mnemonics W - Web Browser
+            run = "move-node-to-workspace W";
+          }
+          {
+            "if" = {
               app-id = "company.thebrowser.Browser";
             }; # mnemonics W - Web Browser
             run = "move-node-to-workspace W";

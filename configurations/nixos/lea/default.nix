@@ -33,16 +33,18 @@ in
     openFirewall = true;
   };
   services.llama-cpp = {
-    enable = true;
+    enable = false;
     openFirewall = true;
-    port = 8081;
+    port = 8082;
     host = "0.0.0.0";
+    # packages = [ (pkgs.llama-cpp.override { enableCuda = true; }) ];
     # extraFlags = [ "--slots" ];
     model = "/models/qwen2.5-coder-32b-instruct-q5_0.gguf";
   };
   services.ollama = {
-    enable = false;
-    port = 12345;
+    enable = true;
+    port = 8081;
+    host = "0.0.0.0";
     acceleration = "cuda";
     openFirewall = true;
   };
@@ -50,6 +52,7 @@ in
     enable = true;
     openFirewall = true;
     port = 8080;
+    host = "0.0.0.0";
     environment = {
       OLLAMA_API_BASE_URL = "http://127.0.0.1:8081";
       # Disable authentication
@@ -66,8 +69,6 @@ in
     vscode
     vivaldi
     devenv
-    (llama-cpp.override { cudaSupport = true; })
-
     zed-editor
   ];
 

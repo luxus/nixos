@@ -11,7 +11,7 @@ in
     inputs.nixos-hardware.nixosModules.common-cpu-amd-pstate
     inputs.nixos-hardware.nixosModules.common-cpu-amd-zenpower
     inputs.nixos-hardware.nixosModules.common-cpu-amd-raphael-igpu
-    inputs.nixos-facter-modules.nixosModules.facter
+    # inputs.nixos-facter-modules.nixosModules.facter
     # inputs.nixos-hardware.nixosModules.common-gpu-nvidia-ada-lovelace
     # inputs.nixos-hardware.nixosModules.common-gpu-nvidia
     inputs.nixos-hardware.nixosModules.common-pc-ssd
@@ -27,7 +27,7 @@ in
     (self + /modules/nixos/linux/gui/desktopish/steam.nix)
     (self + /modules/nixos/linux/gui/_1password.nix)
   ];
-  config.facter.reportPath = ./hardware.json;
+  # config.facter.reportPath = ./hardware.json;
 
   # Enable the OpenSSH daemon.
   services.openssh = {

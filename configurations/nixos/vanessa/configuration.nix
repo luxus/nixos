@@ -21,7 +21,7 @@
     timeout = 10;
   };
   networking = {
-    hostName = "lea"; # Define your hostname.
+    hostName = "vanessa"; # Define your hostname.
     networkmanager.enable = true;
   };
 

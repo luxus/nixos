@@ -38,6 +38,8 @@ in
       omnix
       nixpkgs-fmt
       just
+      zellij
+      devenv
 
       # Publishing
       asciinema

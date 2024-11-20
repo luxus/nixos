@@ -19,8 +19,8 @@
     ./all/aria2.nix
     ./all/fastfetch.nix
     ./all/just.nix
-    ./all/kitty.nix
-    ./all/zathura.nix
+    # ./all/kitty.nix
+    # ./all/zathura.nix
     # ./powershell.nix
     #./all/juspay.nix
   ];

@@ -49,6 +49,7 @@
     casks = [
       "aerospace"
       "chatterino"
+      "kando"
       "whisky"
       "steam"
       "keycastr"

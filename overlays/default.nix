@@ -12,6 +12,8 @@ self: super: {
   twitter-convert = self.callPackage "${packages}/twitter-convert" { };
   sshuttle-via = self.callPackage "${packages}/sshuttle-via.nix" { };
   monolisa = self.callPackage "${packages}/monolisa.nix" { };
+  #FIX: notworking
+  # mycomfyui = self.callPackage "${packages}/mycomfyui.nix" { };
 
   ci = self.callPackage "${packages}/ci" { };
   touchpr = self.callPackage "${packages}/touchpr" { };

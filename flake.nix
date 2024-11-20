@@ -15,6 +15,8 @@
     nixos-unified.url = "github:srid/nixos-unified";
     ghostty-bin.inputs.nixpkgs-unstable.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
+    nix-comfyui.url = "github:luxus/nix-comfyui";
+    nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     ragenix.url = "github:yaxitech/ragenix";
     nuenv.url = "github:hallettj/nuenv/writeShellApplication";

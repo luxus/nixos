@@ -11,6 +11,7 @@ in
     inputs.nixos-hardware.nixosModules.common-cpu-amd-pstate
     inputs.nixos-hardware.nixosModules.common-cpu-amd-zenpower
     inputs.nixos-hardware.nixosModules.common-cpu-amd-raphael-igpu
+    inputs.nixos-facter-modules.nixosModules.facter
     # inputs.nixos-hardware.nixosModules.common-gpu-nvidia-ada-lovelace
     # inputs.nixos-hardware.nixosModules.common-gpu-nvidia
     inputs.nixos-hardware.nixosModules.common-pc-ssd
@@ -26,6 +27,7 @@ in
     (self + /modules/nixos/linux/gui/desktopish/steam.nix)
     (self + /modules/nixos/linux/gui/_1password.nix)
   ];
+  config.facter.reportPath = ./hardware.json;
 
   # Enable the OpenSSH daemon.
   services.openssh = {
@@ -35,7 +37,7 @@ in
   services.llama-cpp = {
     enable = false;
     openFirewall = true;
-    port = 8082;
+    port = 8088;
     host = "0.0.0.0";
     # packages = [ (pkgs.llama-cpp.override { enableCuda = true; }) ];
     # extraFlags = [ "--slots" ];
@@ -43,13 +45,12 @@ in
   };
   services.ollama = {
     enable = true;
-    port = 8081;
+    # port = 8081;
     host = "0.0.0.0";
-    acceleration = "cuda";
     openFirewall = true;
   };
   services.open-webui = {
-    enable = true;
+    enable = false;
     openFirewall = true;
     port = 8080;
     host = "0.0.0.0";
@@ -62,7 +63,40 @@ in
       SCARF_NO_ANALYTICS = "True";
     };
   };
+  # Enable common container config files in /etc/containers
+  virtualisation.containers.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
 
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+  services.cloudflared = {
+    enable = true;
+    tunnels = {
+      "bc9e74c3-d8d2-4eb3-9088-be1a0bcc4845" = {
+        credentialsFile = "/cf.json";
+        default = "http_status:404";
+        ingress = {
+          "webui.luxus.ai" = "http://localhost:8080";
+          "lea.luxus.ai" = "ssh://localhost:22";
+          "leardp.luxus.ai" = "rdp://localhost:3389";
+        };
+      };
+    };
+  };
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [
+      8080
+    ];
+  };
   programs.nix-ld.enable = true; # for vscode server
 
   environment.systemPackages = with pkgs; [
@@ -70,6 +104,10 @@ in
     vivaldi
     devenv
     zed-editor
+    dive # look into docker image layers
+    podman-tui # status of containers in the terminal
+    docker-compose # start group of containers for dev
+    #podman-compose # start group of containers for dev
   ];
 
   hardware.i2c.enable = true;

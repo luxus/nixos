@@ -8,6 +8,10 @@
 
   programs.nushell = {
     enable = true;
+    environmentVariables = {
+      PROMPT_INDICATOR_VI_INSERT = "'󰞷 '";
+      PROMPT_INDICATOR_VI_NORMAL = "' '";
+    };
     # envFile.source = ./nushell/env.nu;
     configFile.source = ./nushell/config.nu;
     inherit (config.home) shellAliases; # Our shell aliases are pretty simple

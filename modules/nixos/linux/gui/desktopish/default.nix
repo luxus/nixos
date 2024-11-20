@@ -24,6 +24,8 @@
   environment.systemPackages = with pkgs; [
     acpi
     mpv
+    kando
+    chatterino2
     youtube-dl
     xorg.xmessage
   ];

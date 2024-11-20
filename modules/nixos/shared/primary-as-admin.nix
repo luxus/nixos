@@ -24,6 +24,7 @@
         // lib.optionalAttrs pkgs.stdenv.isLinux {
           isNormalUser = true;
           extraGroups = [
+            "video"
             "networkmanager"
             "wheel"
             "uinput"

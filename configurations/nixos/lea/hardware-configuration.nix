@@ -14,6 +14,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   boot.initrd.availableKernelModules = [
     "nvme"
     "xhci_pci"
@@ -21,12 +22,35 @@
     "usbhid"
     "usb_storage"
     "sd_mod"
+    "nvidia"
+    "nvidia_modeset"
+    "nvidia_drm"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [
+    "nvidia-uvm"
+    "kvm-amd"
+  ];
   boot.extraModulePackages = [ ];
-
+  boot.kernelParams = [
+    "nvidia_drm.modeset=1"
+    "nvidia_drm.fbdev=1"
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+    "quiet"
+    "splash"
+    "boot.shell_on_fail"
+    "vt.global_cursor_default=0"
+    "loglevel=3"
+    "rd.systemd.show_status=false"
+    "rd.udev.log_level=3"
+    "udev.log_priority=3"
+  ];
+  boot.plymouth.enable = true;
+  boot.plymouth.theme = "nixos-bgrt";
+  boot.plymouth.themePackages = [
+    pkgs.nixos-bgrt-plymouth
+  ];
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -38,9 +62,17 @@
   # networking.interfaces.enp1s0f0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
   hardware.graphics = {
+    enable32Bit = true;
     enable = true;
+    extraPackages32 = with pkgs.driversi686Linux; [
+      libvdpau-va-gl
+    ];
+    extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+      libvdpau-va-gl
+    ];
   };
-
+  hardware.nvidia-container-toolkit.enable = true;
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -53,7 +85,25 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  environment.systemPackages = with pkgs; [
+    libva
+    libvdpau
+    vdpauinfo # NOTE: vdpauinfo
+    libva-utils # NOTE: vainfo
+    vulkan-tools # NOTE: vulkaninfo
+    glxinfo # NOTE: glxinfo and eglinfo
+    nvtopPackages.full # NOTE: check GPU usage
+  ];
   nixpkgs.config.cudaSupport = true;
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "nvidia"; # NOTE: hardware acceleration
+    VDPAU_DRIVER = "va_gl"; # NOTE: hardware acceleration
+    GBM_BACKEND = "nvidia-drm"; # NOTE: wayland buffer api
+    WLR_RENDERER = "gles2"; # NOTE: wayland roots compositor renderer
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # NOTE: offload opengl workloads to nvidia
+
+    NVD_BACKEND = "direct"; # NOTE: nvidia-vaapi-driver backend
+    __GL_GSYNC_ALLOWED = "1"; # NOTE: nvidia g-sync
+    __GL_VRR_ALLOWED = "1"; # NOTE: nvidia g-sync
+  };
 }

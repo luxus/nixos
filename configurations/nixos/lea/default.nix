@@ -26,6 +26,7 @@ in
     (self + /modules/nixos/linux/gui/desktopish/kanata.nix)
     (self + /modules/nixos/linux/gui/desktopish/steam.nix)
     (self + /modules/nixos/linux/gui/_1password.nix)
+
   ];
   # config.facter.reportPath = ./hardware.json;
 

@@ -1,4 +1,4 @@
-{ flake, ... }:
+{ pkgs, flake, ... }:
 
 let
   inherit (flake) inputs;
@@ -37,6 +37,12 @@ in
   };
   # Enable the OpenSSH daemon.
   services = {
+    ollama = {
+      enable = true;
+      # port = 8081;
+      host = "0.0.0.0";
+      openFirewall = true;
+    };
     openssh = {
       enable = true;
       openFirewall = true;
@@ -75,6 +81,9 @@ in
   };
   programs.nix-ld.enable = true; # for vscode server
 
+  environment.systemPackages = with pkgs; [
+    cudatoolkit
+  ];
   hardware.i2c.enable = true;
 
   # Workaround the annoying `Failed to start Network Manager Wait Online` error on switch.

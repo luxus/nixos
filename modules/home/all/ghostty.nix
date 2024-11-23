@@ -12,9 +12,9 @@
     package = lib.mkIf pkgs.stdenv.isLinux flake.inputs.ghostty-bin.packages.${pkgs.system}.default;
 
     settings = {
-      # font-family = "Iosevka";
       font-family = "MonoLisa";
-      font-style = "Regular";
+      font-style = "Medium";
+      font-style-italic = "Medium Italic";
       font-size = 14;
       font-feature = [
         "zero"
@@ -34,23 +34,24 @@
         "ss17"
       ];
       background-opacity = 0.8;
+      macos-titlebar-style = "tabs";
       # confirm-close-surface = false;
-      copy-on-select = true;
-      # cursor-style = "bar";
+      copy-on-select = false;
+      # cursor-style-blink = true;
+      # cursor-style = "block";
       background-blur-radius = 0;
       unfocused-split-opacity = 0.6;
       # minimum-contrast = 1.1;
-      macos-non-native-fullscreen = true;
+      macos-non-native-fullscreen = false;
       macos-option-as-alt = true;
       # term = "xterm-kitty";
-      window-decoration = false;
+      theme = "dark:Peppermint,light:neobones_light";
+      window-decoration = true;
       # window-padding-x = terminal.padding;
       # window-padding-y = terminal.padding;
-      mouse-hide-while-typing = true;
+      # mouse-hide-while-typing = true;
 
       quit-after-last-window-closed = true;
-
-      # macos-titlebar-style = "transparent";
 
       # window-padding-x = 15;
       # window-padding-y = 15;
@@ -78,30 +79,30 @@
       #   selection-background = "#2b3b51";
       #   selection-foreground = "#cdcecf";
       # };
-      palette = [
-        "0=#393552"
-        "1=#eb6f92"
-        "2=#a3be8c"
-        "3=#f6c177"
-        "4=#569fba"
-        "5=#c4a7e7"
-        "6=#9ccfd8"
-        "7=#e0def4"
-        "8=#47407d"
-        "9=#f083a2"
-        "10=#b1d196"
-        "11=#f9cb8c"
-        "12=#65b1cd"
-        "13=#ccb1ed"
-        "14=#a6dae3"
-        "15=#e2e0f7"
-        "16=#ea9a97"
-      ];
-      background = "#000000";
-      foreground = "#e0def4";
-      cursor-color = "#e0def4";
-      selection-background = "#433c59";
-      selection-foreground = "#e0def4";
+      # palette = [
+      #   "0=#393552"
+      #   "1=#eb6f92"
+      #   "2=#a3be8c"
+      #   "3=#f6c177"
+      #   "4=#569fba"
+      #   "5=#c4a7e7"
+      #   "6=#9ccfd8"
+      #   "7=#e0def4"
+      #   "8=#47407d"
+      #   "9=#f083a2"
+      #   "10=#b1d196"
+      #   "11=#f9cb8c"
+      #   "12=#65b1cd"
+      #   "13=#ccb1ed"
+      #   "14=#a6dae3"
+      #   "15=#e2e0f7"
+      #   "16=#ea9a97"
+      # ];
+      # background = "#000000";
+      # foreground = "#e0def4";
+      # cursor-color = "#e0def4";
+      # selection-background = "#433c59";
+      # selection-foreground = "#e0def4";
     };
 
     keybindings = {

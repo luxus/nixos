@@ -12,7 +12,7 @@
       cleanup = "uninstall";
     };
     masApps = {
-      "Xcode" = 497799835;
+      # "Xcode" = 497799835;
       "CrystalFetch" = 6454431289;
       "Parcel" = 639968404;
       "Keynote" = 409183694;
@@ -48,17 +48,16 @@
 
     casks = [
       "aerospace"
-      "chatterino"
-      "kando"
+      # "kando"
       "whisky"
       "steam"
-      "keycastr"
+      # "keycastr"
       "aldente"
-      "superslicer"
+      # "superslicer"
       "discord"
       "qlmarkdown"
-      "microsoft-teams"
-      "arc"
+      # "microsoft-teams"
+      # "arc"
       "webstorm"
       "cloudflare-warp"
       "scroll-reverser"
@@ -67,15 +66,15 @@
       "logseq"
       "balenaetcher"
       "1password@beta"
-      "plexamp"
+      # "plexamp"
       "utm"
       "gitkraken"
       "orbstack"
-      "cursor"
+      # "cursor"
       "plex"
-      "microsoft-edge@dev"
+      # "microsoft-edge@dev"
       "lunar"
-      "visual-studio-code@insiders"
+      # "visual-studio-code@insiders"
       "sf-symbols"
       "wireshark"
       "iina"

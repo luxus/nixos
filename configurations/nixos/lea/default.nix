@@ -50,8 +50,9 @@ in
     host = "0.0.0.0";
     openFirewall = true;
   };
+  services.hardware.openrgb.enable = true;
   services.open-webui = {
-    enable = false;
+    enable = true;
     openFirewall = true;
     port = 8080;
     host = "0.0.0.0";
@@ -80,22 +81,27 @@ in
   services.cloudflared = {
     enable = true;
     tunnels = {
-      "bc9e74c3-d8d2-4eb3-9088-be1a0bcc4845" = {
-        credentialsFile = "/cf.json";
+      "d167a37f-c07b-4444-a0a0-c80a84ebd6ac" = {
+        credentialsFile = "/d167a37f-c07b-4444-a0a0-c80a84ebd6ac.json";
         default = "http_status:404";
         ingress = {
-          "webui.luxus.ai" = "http://localhost:8080";
-          "lea.luxus.ai" = "ssh://localhost:22";
-          "leardp.luxus.ai" = "rdp://localhost:3389";
+          "webui.infoguard.diy" = "http://localhost:8080";
+          "flow.infoguard.diy" = "http://localhost:3000";
+          "lea.infoguard.diy" = "ssh://localhost:22";
+          "leardp.infoguard.diy" = "rdp://localhost:3389";
         };
       };
     };
   };
+  # hardware.fancontrol.enable = true;
 
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [
       8080
+      8081
+      3000
+      3389
     ];
   };
   programs.nix-ld.enable = true; # for vscode server
@@ -108,7 +114,11 @@ in
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
     docker-compose # start group of containers for dev
-    #podman-compose # start group of containers for dev
+    podman-compose # start group of containers for dev
+    lm_sensors
+    fan2go
+    python312Packages.pydantic
+
   ];
 
   hardware.i2c.enable = true;

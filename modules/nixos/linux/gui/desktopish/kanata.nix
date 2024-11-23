@@ -48,7 +48,7 @@
       (deflayer rightalt
         _    _    _    _    _    _    _   _     _   _     _    _    _   _
         _    _    _    _    _    _    _   @uum  _   @oum  _    _    _   _
-        _    @aum @ss  _    _    _    _   _     _   _     _    _    _
+        _    @aum @ss  _    _    _    AG-h   AG-j     AG-k   AG-l     _    _    _
         _    _    _    _    _    _    _   _     _   _     _    _
         _    _    _              _              _   _     _
       )

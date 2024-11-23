@@ -23,12 +23,12 @@ in
     # ];
     packages = with pkgs; [
       # Unixy tools
-      ripgrep
       sd
       wget
       moreutils # ts, etc.
       gnumake
       killall
+      lolcat
       # Broken, https://github.com/NixOS/nixpkgs/issues/299680
       # ncdu
 
@@ -40,27 +40,27 @@ in
       just
       zellij
       devenv
+      jj
+      lazyjj
 
       # Publishing
       asciinema
       twitter-convert
 
       # Dev
-      gh
       fuckport
       sshuttle-via
       entr
       git-merge-and-delete
       hub
+      google-cloud-sdk
       dwt1-shell-color-scripts
+      quarto
 
       # Fonts
       lsof
       rustscan
-
       gnupg
-      ripgrep # Better `grep`
-      sd
       tree
       nmap
       # new tools
@@ -70,6 +70,7 @@ in
       w3m
       ast-grep
       mediainfo
+      chafa
       odt2txt
       # spotify-player
       pueue
@@ -83,9 +84,6 @@ in
       duf
       gitu
       twitch-tui
-      nushellPlugins.skim
-      nushellPlugins.gstat
-      nushellPlugins.net
 
       # Nix dev
       cachix
@@ -99,6 +97,8 @@ in
 
       # Dev
       tmate
+      quarto
+      typst
 
     ];
   };
@@ -117,6 +117,7 @@ in
     skim = {
       enable = true;
     };
+    ripgrep.enable = true;
 
     # Better `cat`
     bat = {
@@ -153,9 +154,10 @@ in
     jq.enable = true;
     # Install btop https://github.com/aristocratos/btop
     btop.enable = true;
+    carapace.enable = true;
     thefuck = {
       enable = true;
-      enableInstantMode = true;
+      # enableInstantMode = false;
     };
     fd.enable = true;
     bun.enable = true;

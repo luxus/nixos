@@ -1,0 +1,1 @@
+{ programs.nheko.enable = true; }

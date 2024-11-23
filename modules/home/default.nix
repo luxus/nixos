@@ -7,7 +7,8 @@
     # ./helix.nix
     ./all/ssh.nix
     # ./all/ai
-    ./all/omp.nix
+    # ./all/omp.nix
+    ./all/starship.nix
     ./all/ghostty.nix
     ./all/astronvim.nix
     ./all/terminal.nix

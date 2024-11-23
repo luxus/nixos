@@ -6,6 +6,10 @@
 }:
 {
   services = {
+    xrdp = {
+      enable = false;
+      openFirewall = true;
+    };
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;

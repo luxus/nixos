@@ -14,6 +14,8 @@
       noto-fonts-emoji
       monaspace
       monolisa
+      corefonts
+      vistafonts
       fira-code
       cascadia-code
       jetbrains-mono

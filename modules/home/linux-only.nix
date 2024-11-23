@@ -3,6 +3,7 @@
     ./all/bash.nix
     # ./all/ai
     ./all/zsh.nix
-    ./all/nushell.nix
+    ./gui.nix
+    # ./all/nushell.nix
   ];
 }

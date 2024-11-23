@@ -64,7 +64,12 @@ in
     enable = true;
     allowedTCPPorts = [
       8080
+      8188
     ];
+  };
+  services.immich = {
+    enable = true;
+    openFirewall = true;
   };
   # Enable common container config files in /etc/containers
   virtualisation.containers.enable = true;

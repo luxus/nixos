@@ -23,12 +23,12 @@ in
     # ];
     packages = with pkgs; [
       # Unixy tools
-      ripgrep
       sd
       wget
       moreutils # ts, etc.
       gnumake
       killall
+      lolcat
       # Broken, https://github.com/NixOS/nixpkgs/issues/299680
       # ncdu
 
@@ -46,7 +46,6 @@ in
       twitter-convert
 
       # Dev
-      gh
       fuckport
       sshuttle-via
       entr
@@ -57,10 +56,7 @@ in
       # Fonts
       lsof
       rustscan
-
       gnupg
-      ripgrep # Better `grep`
-      sd
       tree
       nmap
       # new tools
@@ -83,9 +79,6 @@ in
       duf
       gitu
       twitch-tui
-      nushellPlugins.skim
-      nushellPlugins.gstat
-      nushellPlugins.net
 
       # Nix dev
       cachix
@@ -117,6 +110,7 @@ in
     skim = {
       enable = true;
     };
+    ripgrep.enable = true;
 
     # Better `cat`
     bat = {
@@ -155,7 +149,7 @@ in
     btop.enable = true;
     thefuck = {
       enable = true;
-      enableInstantMode = true;
+      # enableInstantMode = false;
     };
     fd.enable = true;
     bun.enable = true;

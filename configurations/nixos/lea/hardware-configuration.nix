@@ -5,7 +5,7 @@
   config,
   lib,
   pkgs,
-  flake,
+  nixpkgs-small,
   modulesPath,
   ...
 }:
@@ -30,7 +30,7 @@
   ];
   boot.initrd.kernelModules = [ ];
   # boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelPackages = flake.nixpkgs-unstable-small.pkgs.linuxPackages_latest;
+  boot.kernelPackages = nixpkgs-small.legacyPackages.${pkgs.system}.linuxPackages_latest;
   boot.kernelModules = [
     "nvidia-uvm"
     "kvm-amd"

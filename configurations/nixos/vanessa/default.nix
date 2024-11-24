@@ -64,6 +64,7 @@ in
     enable = true;
     allowedTCPPorts = [
       8080
+      8188
     ];
   };
   # Enable common container config files in /etc/containers

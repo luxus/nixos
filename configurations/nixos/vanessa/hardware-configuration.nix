@@ -26,7 +26,7 @@
     "nvidia_drm"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [
     "nvidia-uvm"
     "kvm-intel"

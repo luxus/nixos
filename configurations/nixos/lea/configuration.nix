@@ -58,6 +58,10 @@
       pulse.enable = true;
     };
   };
+  #NOTE: its for nheko
+  nixpkgs.config.permittedInsecurePackages = [
+    "olm-3.2.16"
+  ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;

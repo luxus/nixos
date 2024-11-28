@@ -52,6 +52,7 @@ in
       git-merge-and-delete
       hub
       dwt1-shell-color-scripts
+      quarto
 
       # Fonts
       lsof

@@ -33,7 +33,8 @@
       ripgrep
       tree-sitter
       nixd
-      # zig
+      zig
+      gcc
     ];
   };
 

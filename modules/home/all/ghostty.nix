@@ -46,7 +46,7 @@
       macos-option-as-alt = true;
       # term = "xterm-kitty";
       theme = "dark:Peppermint,light:neobones_light";
-      window-decoration = true;
+      window-decoration = false;
       # window-padding-x = terminal.padding;
       # window-padding-y = terminal.padding;
       # mouse-hide-while-typing = true;

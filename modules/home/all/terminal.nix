@@ -40,6 +40,8 @@ in
       just
       zellij
       devenv
+      jj
+      lazyjj
 
       # Publishing
       asciinema
@@ -93,6 +95,8 @@ in
 
       # Dev
       tmate
+      quarto
+      typst
 
     ];
   };

@@ -53,6 +53,7 @@ in
       entr
       git-merge-and-delete
       hub
+      google-cloud-sdk
       dwt1-shell-color-scripts
       quarto
 

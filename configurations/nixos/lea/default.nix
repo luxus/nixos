@@ -50,8 +50,9 @@ in
     host = "0.0.0.0";
     openFirewall = true;
   };
+  services.hardware.openrgb.enable = true;
   services.open-webui = {
-    enable = false;
+    enable = true;
     openFirewall = true;
     port = 8080;
     host = "0.0.0.0";
@@ -78,7 +79,7 @@ in
     };
   };
   services.cloudflared = {
-    enable = true;
+    enable = false;
     tunnels = {
       "bc9e74c3-d8d2-4eb3-9088-be1a0bcc4845" = {
         credentialsFile = "/cf.json";
@@ -96,6 +97,9 @@ in
     enable = true;
     allowedTCPPorts = [
       8080
+      8081
+      3000
+      3389
     ];
   };
   programs.nix-ld.enable = true; # for vscode server

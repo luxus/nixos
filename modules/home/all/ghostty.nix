@@ -8,6 +8,16 @@
   imports = [ flake.inputs.ghostty.homeModules.default ];
   programs.ghostty = {
     enable = true;
+    # clearDefaultKeybindings = true;
+    keybindings = {
+      "super+c" = "copy_to_clipboard";
+      "global:alt+enter" = "toggle_quick_terminal";
+
+      "super+shift+h" = "goto_split:left";
+      "super+shift+j" = "goto_split:bottom";
+      "super+shift+k" = "goto_split:top";
+      "super+shift+l" = "goto_split:right";
+    };
 
     package = lib.mkIf pkgs.stdenv.isLinux flake.inputs.ghostty-bin.packages.${pkgs.system}.default;
 
@@ -34,24 +44,28 @@
         "ss17"
       ];
       background-opacity = 0.8;
-      macos-titlebar-style = "tabs";
+      macos-titlebar-style = "hidden";
+
       # confirm-close-surface = false;
+      macos-window-shadow = false;
       copy-on-select = false;
-      # cursor-style-blink = true;
+      cursor-style-blink = true;
       # cursor-style = "block";
       background-blur-radius = 0;
       unfocused-split-opacity = 0.6;
       # minimum-contrast = 1.1;
       macos-non-native-fullscreen = false;
-      macos-option-as-alt = true;
+      macos-option-as-alt = "left";
       # term = "xterm-kitty";
-      theme = "dark:Peppermint,light:neobones_light";
-      window-decoration = false;
+      theme = "dark:neobones_dark,light:neobones_light";
+      window-decoration = lib.mkIf pkgs.stdenv.isDarwin true;
+      clipboard-paste-protection = false;
       # window-padding-x = terminal.padding;
       # window-padding-y = terminal.padding;
       # mouse-hide-while-typing = true;
 
-      quit-after-last-window-closed = true;
+      # quit-after-last-window-closed = true;
+      quit-after-last-window-closed-delay = "2h";
 
       # window-padding-x = 15;
       # window-padding-y = 15;

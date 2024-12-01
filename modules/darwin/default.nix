@@ -21,6 +21,7 @@ in
     inputs.ragenix.darwinModules.default
     ./all/zsh-completion-fix.nix
     ./homebrew.nix
+    # ../nixos/linux/gui/desktopish/kanata.nix
   ];
 
   # Auto upgrade nix package and the daemon service.

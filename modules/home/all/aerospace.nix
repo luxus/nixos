@@ -83,7 +83,7 @@ in
               // (makeCommands "alt-shift" key "move-node-to-workspace {key}")
             ) { } keys)
             // {
-              alt-enter = "exec-and-forget open -n ${pkgs.kitty}/Applications/kitty.app";
+              # alt-enter = "exec-and-forget open -n ${pkgs.kitty}/Applications/kitty.app";
               cmd-h = [ ];
               # See: https://nikitabobko.github.io/AeroSpace/commands#layout
               alt-slash = "layout tiles horizontal vertical";

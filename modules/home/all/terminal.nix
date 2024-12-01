@@ -70,6 +70,7 @@ in
       w3m
       ast-grep
       mediainfo
+      chafa
       odt2txt
       # spotify-player
       pueue

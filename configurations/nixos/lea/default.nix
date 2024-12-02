@@ -92,6 +92,7 @@ in
       };
     };
   };
+  # hardware.fancontrol.enable = true;
 
   networking.firewall = {
     enable = true;
@@ -112,7 +113,10 @@ in
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
     docker-compose # start group of containers for dev
-    #podman-compose # start group of containers for dev
+    podman-compose # start group of containers for dev
+    lm_sensors
+    fan2go
+
   ];
 
   hardware.i2c.enable = true;

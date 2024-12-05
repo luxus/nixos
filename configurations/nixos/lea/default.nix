@@ -79,15 +79,16 @@ in
     };
   };
   services.cloudflared = {
-    enable = false;
+    enable = true;
     tunnels = {
-      "bc9e74c3-d8d2-4eb3-9088-be1a0bcc4845" = {
-        credentialsFile = "/cf.json";
+      "d167a37f-c07b-4444-a0a0-c80a84ebd6ac" = {
+        credentialsFile = "/d167a37f-c07b-4444-a0a0-c80a84ebd6ac.json";
         default = "http_status:404";
         ingress = {
-          "webui.luxus.ai" = "http://localhost:8080";
-          "lea.luxus.ai" = "ssh://localhost:22";
-          "leardp.luxus.ai" = "rdp://localhost:3389";
+          "webui.infoguard.diy" = "http://localhost:8080";
+          "flow.infoguard.diy" = "http://localhost:3000";
+          "lea.infoguard.diy" = "ssh://localhost:22";
+          "leardp.infoguard.diy" = "rdp://localhost:3389";
         };
       };
     };
@@ -116,6 +117,7 @@ in
     podman-compose # start group of containers for dev
     lm_sensors
     fan2go
+    python312Packages.pydantic
 
   ];
 

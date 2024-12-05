@@ -5,8 +5,7 @@ in
 {
   programs.starship = {
     enable = true;
-    # presets = [ "jetpack" ];
-    # enableTransience = true;
+    enableTransience = true;
     # settings = {
     #   username = {
     #     style_user = "blue bold";

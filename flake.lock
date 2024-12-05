@@ -486,11 +486,11 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1733427431,
-        "narHash": "sha256-2e1ZgHgn1srsrHexeCN93kgp7D/Z8KyKc/S2EVVFys4=",
+        "lastModified": 1733436494,
+        "narHash": "sha256-/h5pK2ysUhBNyqsD6w0ii3W4zhuAOQNIpd99Vac5nBY=",
         "ref": "refs/heads/main",
-        "rev": "5f2e341d897b0b741cab57640acf21afd03a3fab",
-        "revCount": 8176,
+        "rev": "2fb92dd4aa75214c3bc58220fa7638b698dcace3",
+        "revCount": 8178,
         "type": "git",
         "url": "ssh://git@github.com/ghostty-org/ghostty"
       },
@@ -1190,16 +1190,16 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1726062281,
-        "narHash": "sha256-PyFVySdGj3enKqm8RQuo4v1KLJLmNLOq2yYOHsI6e2Q=",
+        "lastModified": 1733423277,
+        "narHash": "sha256-TxabjxEgkNbCGFRHgM/b9yZWlBj60gUOUnRT/wbVQR8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e65aa8301ba4f0ab8cb98f944c14aa9da07394f8",
+        "rev": "e36963a147267afc055f7cf65225958633e536bf",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "release-24.05",
+        "ref": "release-24.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -1396,11 +1396,11 @@
         "treefmt-nix": "treefmt-nix_3"
       },
       "locked": {
-        "lastModified": 1733280088,
-        "narHash": "sha256-B+S8WhmFdSFzLR7fyVjquLQD9NKbauWCvG1es/wScjY=",
+        "lastModified": 1733434546,
+        "narHash": "sha256-Ebp85EQQ46O2E6QVzS4lOQfjWisOTewD7iinpMKjGXs=",
         "owner": "juspay",
         "repo": "omnix",
-        "rev": "d25eab3a63f600e7c9db02e80b2a7c67c6a76f3a",
+        "rev": "ca6e8f88a1b71088cb814522bd3a37fb6043a1f3",
         "type": "github"
       },
       "original": {

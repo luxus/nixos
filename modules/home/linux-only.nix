@@ -4,6 +4,6 @@
     # ./all/ai
     ./all/zsh.nix
     ./gui.nix
-    ./all/nushell.nix
+    # ./all/nushell.nix
   ];
 }

@@ -154,6 +154,7 @@ in
     jq.enable = true;
     # Install btop https://github.com/aristocratos/btop
     btop.enable = true;
+    carapace.enable = true;
     thefuck = {
       enable = true;
       # enableInstantMode = false;

@@ -42,6 +42,8 @@ in
       devenv
       jj
       lazyjj
+      # broken on mac
+      # monolith
 
       # Publishing
       asciinema

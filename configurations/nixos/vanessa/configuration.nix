@@ -46,6 +46,10 @@
     variant = "";
   };
 
+  #NOTE: its for nheko
+  nixpkgs.config.permittedInsecurePackages = [
+    "olm-3.2.16"
+  ];
   # Enable CUPS to print documents.
   services.printing.enable = false;
 

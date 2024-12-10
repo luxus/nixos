@@ -87,8 +87,11 @@ in
     ];
   };
   services.immich = {
-    enable = true;
+    enable = false;
     openFirewall = true;
+  };
+  services.forgejo = {
+    enable = true;
   };
   # Enable common container config files in /etc/containers
   virtualisation.containers.enable = true;

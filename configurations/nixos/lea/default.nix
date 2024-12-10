@@ -102,6 +102,7 @@ in
       8081
       3000
       3389
+      5173
     ];
   };
   programs.nix-ld.enable = true; # for vscode server

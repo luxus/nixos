@@ -35,6 +35,23 @@ in
       SCARF_NO_ANALYTICS = "True";
     };
   };
+  services.paperless = {
+    enable = true;
+    consumptionDirIsPublic = true;
+    address = "pl.luxus.ai";
+    settings = {
+      PAPERLESS_CONSUMER_IGNORE_PATTERN = [
+        ".DS_STORE/*"
+        "desktop.ini"
+      ];
+      PAPERLESS_OCR_LANGUAGE = "deu+eng";
+      PAPERLESS_OCR_USER_ARGS = {
+        optimize = 1;
+        pdfa_image_compression = "lossless";
+      };
+    };
+  };
+
   # Enable the OpenSSH daemon.
   services = {
     ollama = {
@@ -55,6 +72,7 @@ in
           default = "http_status:404";
           ingress = {
             "gen.luxus.ai" = "http://localhost:8080";
+            "pl.luxus.ai" = "http://localhost:8080";
           };
         };
       };
@@ -65,6 +83,7 @@ in
     allowedTCPPorts = [
       8080
       8188
+      28981
     ];
   };
   services.immich = {

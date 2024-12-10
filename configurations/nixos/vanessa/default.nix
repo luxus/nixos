@@ -84,6 +84,7 @@ in
       8080
       8188
       28981
+      3000
     ];
   };
   services.immich = {
@@ -92,6 +93,7 @@ in
   };
   services.forgejo = {
     enable = true;
+    package = pkgs.forgejo;
   };
   # Enable common container config files in /etc/containers
   virtualisation.containers.enable = true;

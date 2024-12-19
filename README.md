@@ -1,4 +1,5 @@
-[![AGPL](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://en.wikipedia.org/wiki/Affero_General_Public_License)
+<!-- [![AGPL](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://en.wikipedia.org/wiki/Affero_General_Public_License) -->
+
 [![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://nixos.zulipchat.com/#narrow/stream/413948-nixos)
 [![Harmeless Code of Conduct](https://img.shields.io/badge/harmless-8A2BE2)](https://srid.ca/coc "This project follows the 'Harmlessness Code of Conduct'")
 
@@ -45,16 +46,16 @@ Start from `flake.nix` (see [Flakes](https://nixos.wiki/wiki/Flakes)). [`flake-p
 
 ### Directory layout
 
->[!TIP]
+> [!TIP]
 > See `flake-module.nix` for autowiring of flake outputs based on this directory structure.
 
-| Path | Corresponding flake output |
-| -- | -- |
-| `./configurations/{nixos,darwin,home}/foo.nix` |  `{nixos,darwin,home}Configurations.foo` |
-| `./mdules/{nixos,darwin,home,flake-parts}/foo.nix` | `{nixos,darwin,home,flake}Modules.foo` |
-| `./overlays/foo.nix` | `overlays.foo` |
-| `./packages` | N/A (Nix packages) |
-| `./secrets` | N/A (agenix data) |
+| Path                                               | Corresponding flake output              |
+| -------------------------------------------------- | --------------------------------------- |
+| `./configurations/{nixos,darwin,home}/foo.nix`     | `{nixos,darwin,home}Configurations.foo` |
+| `./mdules/{nixos,darwin,home,flake-parts}/foo.nix` | `{nixos,darwin,home,flake}Modules.foo`  |
+| `./overlays/foo.nix`                               | `overlays.foo`                          |
+| `./packages`                                       | N/A (Nix packages)                      |
+| `./secrets`                                        | N/A (agenix data)                       |
 
 ## Tips
 

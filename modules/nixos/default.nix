@@ -20,7 +20,7 @@ in
         flake = "/home/luxus/projects/nixos";
       };
       home-manager.users.${config.me.username} = { };
-      home-manager.backupFileExtension = "dxxdau";
+      home-manager.backupFileExtension = "axscdu";
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.linux-only

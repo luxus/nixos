@@ -25,6 +25,7 @@
       gdu
       libgit2
       nodejs_23
+      corepack_23
       # python3
       deno
       nodePackages.jsonlint

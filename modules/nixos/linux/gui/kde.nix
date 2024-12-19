@@ -24,6 +24,7 @@
     kdePackages.krohnkite
     # neovide
     # krohnkite
+    inkscape
     (vivaldi.overrideAttrs (oldAttrs: {
       dontWrapQtApps = false;
       dontPatchELF = true;

@@ -37,6 +37,7 @@ in
       touchpr
       omnix
       nixpkgs-fmt
+      nurl
       just
       zellij
       devenv

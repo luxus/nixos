@@ -39,6 +39,8 @@ in
       nixpkgs-fmt
       nurl
       just
+      lla
+      mosh
       zellij
       devenv
       jj
@@ -81,6 +83,7 @@ in
       croc
       rsync
       wget
+      eternal-terminal
       ouch
       nettools
       doggo

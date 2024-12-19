@@ -44,6 +44,10 @@
     layout = "us";
     variant = "";
   };
+  programs.mosh = {
+    enable = true;
+    openFirewall = true;
+  };
 
   security.rtkit.enable = true;
   services.eternal-terminal.enable = true;

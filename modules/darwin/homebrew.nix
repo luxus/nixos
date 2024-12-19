@@ -61,6 +61,8 @@
       "webstorm"
       "cloudflare-warp"
       "scroll-reverser"
+      "zen-browser"
+      "arc"
       "burp-suite"
       "raycast"
       "logseq"

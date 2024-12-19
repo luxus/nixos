@@ -66,25 +66,43 @@
 
       # quit-after-last-window-closed = true;
       quit-after-last-window-closed-delay = "2h";
-
+      #modus
       palette = [
-        "0=#2a2a2a"
-        "1=#deeeed"
-        "2=#1bfd9c"
-        "3=#b4b4b4"
-        "4=#7a7a7a"
-        "5=#9d79d6"
-        "6=#cccccc"
-        "7=#dfdfe0"
-        "8=#4a4a4a"
-        "9=#708090"
-        "10=#a6ffc9"
-        "11=#dddddd"
-        "12=#aaaaaa"
-        "13=#49c4c4"
-        "14=#d3d3d3"
-        "15=#ffffff"
+        "0=#000000"
+        "1=#ff5f59"
+        "2=#44bc44"
+        "3=#d0bc00"
+        "4=#2fafff"
+        "5=#feacd0"
+        "6=#00d3d0"
+        "7=#ffffff"
+        "8=#1e1e1e"
+        "9=#ff5f5f"
+        "10=#44df44"
+        "11=#efef00"
+        "12=#338fff"
+        "13=#ff66ff"
+        "14=#00eff0"
+        "15=#989898"
       ];
+      # palette = [
+      #   "0=#2a2a2a"
+      #   "1=#deeeed"
+      #   "2=#1bfd9c"
+      #   "3=#b4b4b4"
+      #   "4=#7a7a7a"
+      #   "5=#9d79d6"
+      #   "6=#cccccc"
+      #   "7=#dfdfe0"
+      #   "8=#4a4a4a"
+      #   "9=#708090"
+      #   "10=#a6ffc9"
+      #   "11=#dddddd"
+      #   "12=#aaaaaa"
+      #   "13=#49c4c4"
+      #   "14=#d3d3d3"
+      #   "15=#ffffff"
+      # ];
       # window-padding-x = 15;
       # window-padding-y = 15;
       #   palette = [

@@ -46,6 +46,7 @@
   };
 
   security.rtkit.enable = true;
+  services.eternal-terminal.enable = true;
   # Enable CUPS to print documents.
 
   # Enable sound with pipewire.

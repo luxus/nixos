@@ -141,9 +141,6 @@ in
       fileWidgetCommand = "fd --type f --hidden --follow";
       defaultOptions = [ "--extended" ];
     };
-    delta = {
-      enable = true;
-    };
 
     gh = {
       enable = true;

@@ -47,6 +47,31 @@ in
           }
           {
             "if" = {
+              app-id = "com.readdle.SparkDesktop-setapp";
+            }; # mnemonics e - e-mail
+            run = "move-node-to-workspace E";
+          }
+          {
+            "if" = {
+              app-id = "org.mozilla.firefox";
+              window-title-regex-substring = "Picture-in-Picture";
+            }; # float pip
+            run = "layout floating";
+          }
+          {
+            "if" = {
+              app-id = "com.apple.mail";
+            }; # mnemonics e - e-mail
+            run = "move-node-to-workspace E";
+          }
+          {
+            "if" = {
+              app-id = "org.mozilla.com.zen.browser";
+            }; # mnemonics W - Web Browser
+            run = "move-node-to-workspace W";
+          }
+          {
+            "if" = {
               app-id = "company.thebrowser.Browser";
             }; # mnemonics W - Web Browser
             run = "move-node-to-workspace W";

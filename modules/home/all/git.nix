@@ -39,6 +39,19 @@
         navigate = true;
         light = false;
         side-by-side = true;
+        decorations = {
+          minus-style = "syntax '#ffbfbf'";
+          minus-non-emph-style = "syntax '#ffbfbf'";
+          minus-emph-style = "syntax '#ffbfbf'";
+          minus-empty-line-marker-style = "syntax '#ffbfbf'";
+          line-numbers-minus-style = "#ffbfbf";
+          plus-style = "syntax '#a0e0a0'";
+          plus-non-emph-style = "syntax '#a0e0a0'";
+          plus-emph-style = "syntax '#a0e0a0'";
+          plus-empty-line-marker-style = "syntax '#a0e0a0'";
+          line-numbers-plus-style = "#a0e0a0";
+          line-numbers-zero-style = "#989898";
+        };
       };
     };
     extraConfig = {

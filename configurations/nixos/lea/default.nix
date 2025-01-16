@@ -101,6 +101,7 @@ in
       8080
       8081
       8188
+      2022
       3000
       3389
       5173
@@ -119,6 +120,8 @@ in
     podman-compose # start group of containers for dev
     lm_sensors
     fan2go
+    #FIX: not avail yet https://github.com/NixOS/nixpkgs/pull/363992
+    # zen-browser
     python312Packages.pydantic
 
   ];

@@ -1,27 +1,22 @@
 {
   lib,
-  flake,
   pkgs,
   ...
 }:
 {
-  imports = [ flake.inputs.ghostty.homeModules.default ];
   programs.ghostty = {
     enable = true;
+    # installVimSyntax = true;
     # clearDefaultKeybindings = true;
-    keybindings = {
-      "super+c" = "copy_to_clipboard";
-      "global:alt+enter" = "toggle_quick_terminal";
-
-      "super+shift+h" = "goto_split:left";
-      "super+shift+j" = "goto_split:bottom";
-      "super+shift+k" = "goto_split:top";
-      "super+shift+l" = "goto_split:right";
-    };
-
-    package = lib.mkIf pkgs.stdenv.isLinux flake.inputs.ghostty-bin.packages.${pkgs.system}.default;
-
     settings = {
+      keybind = [
+        "super+c=copy_to_clipboard"
+        "global:alt+enter=toggle_quick_terminal"
+        "super+shift+h=goto_split:left"
+        "super+shift+j=goto_split:bottom"
+        "super+shift+k=goto_split:top"
+        "super+shift+l=goto_split:right"
+      ];
       font-family = "MonoLisa";
       font-style = "Medium";
       font-style-italic = "Medium Italic";
@@ -58,7 +53,7 @@
       macos-option-as-alt = "left";
       # term = "xterm-kitty";
       theme = "dark:neobones_dark,light:neobones_light";
-      window-decoration = lib.mkIf pkgs.stdenv.isDarwin true;
+      window-decoration = lib.mkIf pkgs.stdenv.isLinux false;
       clipboard-paste-protection = false;
       # window-padding-x = terminal.padding;
       # window-padding-y = terminal.padding;
@@ -135,16 +130,6 @@
       # cursor-color = "#e0def4";
       # selection-background = "#433c59";
       # selection-foreground = "#e0def4";
-    };
-
-    keybindings = {
-      "super+h" = "goto_split:left";
-      "super+l" = "goto_split:right";
-      "super+j" = "goto_split:top";
-      "super+k" = "goto_split:bottom";
-
-      "page_up" = "scroll_page_fractional:-0.5";
-      "page_down" = "scroll_page_fractional:0.5";
     };
   };
 }

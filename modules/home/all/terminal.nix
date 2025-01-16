@@ -42,7 +42,8 @@ in
       zellij
       devenv
       jj
-      lazyjj
+      ghostty
+      # lazyjj
       # broken on mac
       # monolith
 

@@ -10,11 +10,9 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
-    ghostty-bin.url = "git+ssh://git@github.com/ghostty-org/ghostty";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixos-unified.url = "github:srid/nixos-unified";
-    ghostty-bin.inputs.nixpkgs-unstable.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
     nix-comfyui.url = "github:luxus/nix-comfyui";
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";

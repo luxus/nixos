@@ -7,7 +7,7 @@
     enable = true;
     workspace = {
       clickItemTo = "select";
-      wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Mountain/contents/images_dark/5120x2880.png";
+      # wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Mountain/contents/images_dark/5120x2880.png";
     };
     kwin = {
       virtualDesktops.number = 6;

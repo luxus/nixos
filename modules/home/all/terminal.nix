@@ -47,16 +47,16 @@ in
       zellij
       devenv
       jj
-      ghostty
+      # ghostty
       # lazyjj
       # broken on mac
       # monolith
 
       # Publishing
       asciinema
-      twitter-convert
+      # twitter-convert
 
-      # Dev
+      # # Dev
       fuckport
       sshuttle-via
       entr
@@ -64,9 +64,8 @@ in
       hub
       google-cloud-sdk
       dwt1-shell-color-scripts
-      quarto
 
-      # Fonts
+      # # Fonts
       lsof
       rustscan
       gnupg
@@ -81,7 +80,7 @@ in
       mediainfo
       chafa
       odt2txt
-      # spotify-player
+      # # spotify-player
       pueue
       zenith
       croc
@@ -95,7 +94,7 @@ in
       gitu
       twitch-tui
 
-      # Nix dev
+      # # Nix dev
       cachix
       nil # Nix language server
       nix-info
@@ -105,7 +104,7 @@ in
       nix-tree
       nixd
 
-      # Dev
+      # # Dev
       tmate
       quarto
       typst
@@ -159,7 +158,7 @@ in
 
     # Better `cat`
     bat = {
-      enable = true;
+      enable = false;
       extraPackages = with pkgs.bat-extras; [
         batdiff
         batgrep

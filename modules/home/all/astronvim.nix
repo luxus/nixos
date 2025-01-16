@@ -30,7 +30,7 @@
       deno
       nodePackages.jsonlint
       selene
-      aider-chat
+      # aider-chat
       ripgrep
       tree-sitter
       nixd

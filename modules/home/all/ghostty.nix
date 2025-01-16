@@ -6,6 +6,7 @@
 {
   programs.ghostty = {
     enable = true;
+    package = pkgs.hello;
     # installVimSyntax = true;
     # clearDefaultKeybindings = true;
     settings = {

@@ -106,7 +106,8 @@ in
 
       # # Dev
       tmate
-      quarto
+      # quarto
+      #FIX: broken because of typst?
       typst
 
     ];

@@ -46,9 +46,12 @@ in
       prettyping
       zellij
       devenv
-      jj
       # ghostty
-      # lazyjj
+      #lazyjj
+      # cool tui's
+      mods
+      wishlist
+      vhs
       # broken on mac
       # monolith
 
@@ -93,6 +96,10 @@ in
       duf
       gitu
       twitch-tui
+      bat
+      ffuf
+      pandoc
+      aria2
 
       # # Nix dev
       cachix
@@ -107,7 +114,6 @@ in
       # # Dev
       tmate
       # quarto
-      #FIX: broken because of typst?
       typst
 
     ];
@@ -118,6 +124,13 @@ in
   programs = {
     nix-index = {
       enable = true;
+    };
+    jujutsu = {
+      enable = true;
+      settings = {
+        email = "luxuspur@gmail.com";
+        name = "luxus";
+      };
     };
     gitui = {
       enable = true;
@@ -166,7 +179,7 @@ in
         batman
         batpipe
         batwatch
-        prettybat
+        # prettybat
       ];
     };
 

@@ -26,7 +26,8 @@
       libgit2
       nodejs_23
       corepack_23
-      # python3
+      python313
+      playwright
       deno
       nodePackages.jsonlint
       selene

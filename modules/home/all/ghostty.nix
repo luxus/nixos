@@ -3,10 +3,15 @@
   pkgs,
   ...
 }:
+let
+  ghostty-mock = pkgs.writeShellScriptBin "gostty-mock" ''
+    true
+  '';
+in
 {
   programs.ghostty = {
     enable = true;
-    package = pkgs.hello;
+    package = lib.mkIf pkgs.stdenv.isDarwin ghostty-mock;
     installBatSyntax = false;
     # installVimSyntax = true;
     # clearDefaultKeybindings = true;

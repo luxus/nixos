@@ -23,7 +23,4 @@ in
     ./homebrew.nix
     # ../nixos/linux/gui/desktopish/kanata.nix
   ];
-
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
 }

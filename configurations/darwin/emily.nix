@@ -12,7 +12,7 @@ in
 
   nixpkgs.hostPlatform = "aarch64-darwin";
   networking.hostName = "emily";
-
+nix.enable = false;
   security.pam.enableSudoTouchIdAuth = true;
 
   system.keyboard = {

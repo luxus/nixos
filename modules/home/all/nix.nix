@@ -1,6 +1,6 @@
 {
   # Garbage collect automatically every week
-  nix.gc.automatic = true;
+  # nix.gc.automatic = true;
   home.enableNixpkgsReleaseCheck = false;
 
   # Nix configuration is managed globally by nix-darwin.

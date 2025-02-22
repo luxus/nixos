@@ -12,7 +12,7 @@ in
   programs.ghostty = {
     enable = true;
     package = lib.mkIf pkgs.stdenv.isDarwin ghostty-mock;
-    installBatSyntax = false;
+    installBatSyntax = true;
     # installVimSyntax = true;
     # clearDefaultKeybindings = true;
     settings = {
@@ -45,8 +45,8 @@ in
         "ss16"
         "ss17"
       ];
-      background-opacity = 0.8;
-      macos-titlebar-style = "hidden";
+      # background-opacity = 0.8;
+      macos-titlebar-style = "tabs";
 
       # confirm-close-surface = false;
       macos-window-shadow = false;
@@ -60,7 +60,8 @@ in
       macos-option-as-alt = "left";
       # term = "xterm-kitty";
       theme = "dark:neobones_dark,light:neobones_light";
-      window-decoration = lib.mkIf pkgs.stdenv.isLinux false;
+      # window-decoration = lib.mkIf pkgs.stdenv.isLinux false;
+      window-decoration = "auto";
       clipboard-paste-protection = false;
       # window-padding-x = terminal.padding;
       # window-padding-y = terminal.padding;

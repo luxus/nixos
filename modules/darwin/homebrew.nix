@@ -34,6 +34,7 @@
 
     # Add taps.
     taps = [
+      "brewforge/extras"
       "buo/cask-upgrade"
       "homebrew/cask-fonts"
       "homebrew/cask-versions"
@@ -54,11 +55,14 @@
       # "keycastr"
       "aldente"
       # "superslicer"
+      "mos"
       "discord"
       "qlmarkdown"
       # "microsoft-teams"
       # "arc"
+      "5ire"
       "lm-studio"
+      "neohtop"
       "webstorm"
       "cloudflare-warp"
       "scroll-reverser"

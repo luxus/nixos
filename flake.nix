@@ -14,6 +14,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixos-unified.url = "github:srid/nixos-unified";
     disko.url = "github:nix-community/disko";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
     nix-comfyui.url = "github:luxus/nix-comfyui";
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
     disko.inputs.nixpkgs.follows = "nixpkgs";

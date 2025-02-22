@@ -20,7 +20,7 @@ in
         flake = "/home/luxus/projects/nixos";
       };
       home-manager.users.${config.me.username} = { };
-      home-manager.backupFileExtension = "cxu";
+      home-manager.backupFileExtension = "cxxxu";
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.linux-only
@@ -28,6 +28,7 @@ in
     }
     self.nixosModules.common
     inputs.ragenix.nixosModules.default # Used in github-runner.nix & hedgedoc.nix
+    inputs.determinate.nixosModules.default
     ./linux/self-ide.nix
     ./linux/current-location.nix
   ];

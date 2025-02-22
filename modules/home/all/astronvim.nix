@@ -37,6 +37,8 @@
       nixd
       zig
       gcc
+      uv
+      imagemagick
     ];
   };
 

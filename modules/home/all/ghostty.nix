@@ -46,7 +46,8 @@ in
         "ss17"
       ];
       # background-opacity = 0.8;
-      macos-titlebar-style = "tabs";
+      macos-titlebar-style = "hidden";
+      alpha-blending = "linear";
 
       # confirm-close-surface = false;
       macos-window-shadow = false;
@@ -59,9 +60,9 @@ in
       macos-non-native-fullscreen = false;
       macos-option-as-alt = "left";
       # term = "xterm-kitty";
-      theme = "dark:neobones_dark,light:neobones_light";
+      theme = "dark:Kanagawa Dragon,light:neobones_light";
       # window-decoration = lib.mkIf pkgs.stdenv.isLinux false;
-      window-decoration = "auto";
+      # window-decoration = "auto";
       clipboard-paste-protection = false;
       # window-padding-x = terminal.padding;
       # window-padding-y = terminal.padding;
@@ -70,24 +71,24 @@ in
       # quit-after-last-window-closed = true;
       quit-after-last-window-closed-delay = "2h";
       #modus
-      palette = [
-        "0=#000000"
-        "1=#ff5f59"
-        "2=#44bc44"
-        "3=#d0bc00"
-        "4=#2fafff"
-        "5=#feacd0"
-        "6=#00d3d0"
-        "7=#ffffff"
-        "8=#1e1e1e"
-        "9=#ff5f5f"
-        "10=#44df44"
-        "11=#efef00"
-        "12=#338fff"
-        "13=#ff66ff"
-        "14=#00eff0"
-        "15=#989898"
-      ];
+      # palette = [
+      #   "0=#000000"
+      #   "1=#ff5f59"
+      #   "2=#44bc44"
+      #   "3=#d0bc00"
+      #   "4=#2fafff"
+      #   "5=#feacd0"
+      #   "6=#00d3d0"
+      #   "7=#ffffff"
+      #   "8=#1e1e1e"
+      #   "9=#ff5f5f"
+      #   "10=#44df44"
+      #   "11=#efef00"
+      #   "12=#338fff"
+      #   "13=#ff66ff"
+      #   "14=#00eff0"
+      #   "15=#989898"
+      # ];
       # palette = [
       #   "0=#2a2a2a"
       #   "1=#deeeed"

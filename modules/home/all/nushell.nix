@@ -141,18 +141,18 @@
                   | rename -c {before: ($before | path basename), after: ($after | path basename)}
                   | update size {|row| if ($row.size | is-empty) {"0 B"} else {$row.size}} | into filesize size
               }
-              plugin add ${pkgs.nushellPlugins.gstat}/bin/nu_plugin_gstat
+              # plugin add ${pkgs.nushellPlugins.gstat}/bin/nu_plugin_gstat
               # plugin add ${pkgs.nushellPlugins.skim}/bin/nu_plugin_skim
-              plugin add ${pkgs.nushellPlugins.query}/bin/nu_plugin_query
+              # plugin add ${pkgs.nushellPlugins.query}/bin/nu_plugin_query
               #Fix: not updated yet
               # plugin add ${pkgs.nushellPlugins.units}/bin/nu_plugin_units
               # plugin add ${pkgs.nushellPlugins.net}/bin/nu_plugin_net
               # plugin add ${pkgs.nushellPlugins.highlight}/bin/nu_plugin_highlight
 
               # plugin use skim
-              plugin use gstat
-              plugin use formats
-              plugin use query
+              # plugin use gstat
+              # plugin use formats
+              # plugin use query
               # plugin use units
               # plugin use net
               # plugin use highlight

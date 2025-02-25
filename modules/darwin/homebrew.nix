@@ -56,6 +56,8 @@
       "aldente"
       # "superslicer"
       "mos"
+      "elgato-stream-deck"
+      "elgato-wave-link"
       "discord"
       "qlmarkdown"
       # "microsoft-teams"

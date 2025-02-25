@@ -35,6 +35,7 @@ in
       # Useful for Nix development
       ci
       touchpr
+      # oterm
       cargo
       omnix
       nixpkgs-fmt

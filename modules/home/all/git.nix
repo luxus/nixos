@@ -6,7 +6,7 @@
   ];
 
   programs.git = {
-    package = pkgs.gitAndTools.gitFull;
+    # package = pkgs.gitAndTools.gitFull;
     enable = true;
     userName = flake.config.me.username;
     userEmail = flake.config.me.email;
@@ -55,7 +55,7 @@
       };
     };
     extraConfig = {
-      init.defaultBranch = "master"; # Undo breakage due to https://srid.ca/luxury-belief
+      init.defaultBranch = "main"; # Undo breakage due to https://srid.ca/luxury-belief
       core.editor = "nvim";
       #protocol.keybase.allow = "always";
       credential.helper = "store --file ~/.git-credentials";

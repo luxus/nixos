@@ -19,7 +19,7 @@
       ${me.username} =
         {
           openssh.authorizedKeys.keys = myKeys;
-          shell = pkgs.nushell;
+          shell = pkgs.zsh;
         }
         // lib.optionalAttrs pkgs.stdenv.isLinux {
           isNormalUser = true;

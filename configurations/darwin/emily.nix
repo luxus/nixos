@@ -12,8 +12,8 @@ in
 
   nixpkgs.hostPlatform = "aarch64-darwin";
   networking.hostName = "emily";
-nix.enable = false;
-  security.pam.enableSudoTouchIdAuth = true;
+  nix.enable = false;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   system.keyboard = {
     enableKeyMapping = true;

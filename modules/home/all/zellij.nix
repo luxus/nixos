@@ -2,7 +2,10 @@
 
 {
   programs.zellij = {
-    enable = false;
+    enable = true;
+    enableBashIntegration = false;
+    enableZshIntegration = false;
+    enableFishIntegration = false;
     settings = {
       theme = if pkgs.system == "aarch64-darwin" then "dracula" else "gruvbox-light";
       # NOTE: There's no way to set theme by name.

@@ -39,13 +39,11 @@ in
       cargo
       omnix
       nurl
-      fish
       just
       lla
       mosh
       gping
       prettyping
-      zellij
       aichat
       mdp
       devenv
@@ -110,7 +108,6 @@ in
       nix-tree
 
       # # Dev
-      tmate
       quarto
       typst
       pandoc
@@ -181,7 +178,15 @@ in
         # prettybat
       ];
     };
-
+    rbw = {
+      enable = true;
+    };
+    nh = {
+      enable = true;
+    };
+    mpv = {
+      enable = true;
+    };
     fzf = {
       enable = true;
       defaultCommand = "fd --type f --hidden --follow";
@@ -207,22 +212,19 @@ in
     carapace.enable = true;
     thefuck = {
       enable = true;
-      # enableInstantMode = false;
+      enableInstantMode = true;
     };
     fd.enable = true;
     bun.enable = true;
-    # zellij = {
-    #   enable = false;
-    #   enableBashIntegration = false;
-    #   enableZshIntegration = false;
-    # };
+    tmate.enable = true;
+    tealdeer.enable = true;
     yazi = {
       enable = true;
     };
     atuin = {
       enable = true;
       settings = {
-        auto_sync = true;
+        auto_sync = false;
         dialect = "us";
         sync_frequency = "10m";
         sync_address = "https://api.atuin.sh";

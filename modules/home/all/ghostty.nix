@@ -3,11 +3,6 @@
   pkgs,
   ...
 }:
-let
-  ghostty-mock = pkgs.writeShellScriptBin "gostty-mock" ''
-    true
-  '';
-in
 {
   programs.ghostty = {
     enable = true;
@@ -45,7 +40,7 @@ in
         "ss16"
         "ss17"
       ];
-      # background-opacity = 0.8;
+      background-opacity = 0.8;
       macos-titlebar-style = "hidden";
       alpha-blending = "linear";
 

@@ -38,14 +38,16 @@ in
       # oterm
       cargo
       omnix
-      nixpkgs-fmt
       nurl
+      fish
       just
       lla
       mosh
       gping
       prettyping
       zellij
+      aichat
+      mdp
       devenv
       # ghostty
       #lazyjj
@@ -90,7 +92,7 @@ in
       croc
       rsync
       wget
-      eternal-terminal
+      # eternal-terminal
       ouch
       nettools
       doggo
@@ -99,23 +101,19 @@ in
       twitch-tui
       bat
       ffuf
-      pandoc
       aria2
 
       # # Nix dev
       cachix
-      nil # Nix language server
       nix-info
-      nixpkgs-fmt
-      nixfmt-rfc-style
       nixpkgs-review
       nix-tree
-      nixd
 
       # # Dev
       tmate
-      # quarto
+      quarto
       typst
+      pandoc
 
     ];
   };

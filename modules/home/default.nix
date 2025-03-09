@@ -6,6 +6,8 @@
     #./all/neovim
     # ./helix.nix
     ./all/ssh.nix
+    ./all/bash.nix
+    ./all/fish.nix
     # ./all/ai
     # ./all/omp.nix
     ./all/starship.nix

@@ -5,6 +5,7 @@ in
 {
   programs.starship = {
     enable = true;
+    enableZshIntegration = false;
     enableTransience = true;
     # settings = {
     #   username = {

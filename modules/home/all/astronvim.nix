@@ -18,6 +18,8 @@
     packages = with pkgs; [
       # jdk22
       go
+      prettierd
+      stylua
       unzip
       vale
       luajitPackages.tiktoken_core
@@ -31,10 +33,12 @@
       deno
       nodePackages.jsonlint
       selene
-      aider-chat
+      #NOTE:most of the time out of date, using uv package instead
+      # aider-chat
       ripgrep
       tree-sitter
       nixd
+      nixfmt-rfc-style
       zig
       gcc
       uv
